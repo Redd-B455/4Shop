@@ -9,6 +9,21 @@ form{
 	margin-top: 2em;
 }
 
+.product-title{
+	display: flex;
+	justify-content: space-between;
+}
+
+.imglogo {
+	height: 4rem;
+}
+
+.product-body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 fieldset{
 	margin: 1em 0;
 }
@@ -28,6 +43,7 @@ header{
 	display: flex;
     justify-content: space-between;
     align-items: center;
+	font-family: 'Libre Baskerville', serif;
 }
 
 .my-table{
