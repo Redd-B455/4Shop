@@ -11,6 +11,11 @@ class Product extends Model
     	return $this->hasMany(Type::class);
     }
 
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function getPriceAttribute($value)
     {
         $discount = $value * ($this->discount / 100);
