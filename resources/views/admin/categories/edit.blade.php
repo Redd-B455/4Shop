@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="d-flex align-items-center flex-column my-5"> 
+<div class="categories-edit"> 
 	<form action="{{ route('admin.categories.update', $category) }}" method="POST" style="min-width: 320px;" enctype="multipart/form-data">
 		<h4>Categorie aanpassen</h4>
 		<div class="form-group">
 		<label for="name">Naam</label>
-		<input type="text" class="form-control" value="{{ old('name', $category->name) }}">
+		<input type="text" id="name" name="name" class="form-control" value="{{ old('name', $category->name) }}">
 		{{ csrf_field() }}
 		{{ method_field('PATCH') }}
 		</div>
@@ -15,6 +15,16 @@
 		{{ csrf_field() }}
 		{{ method_field('PATCH') }}
 	</form>
+	<div>
+		<h4>Producten</h4>
+		@foreach
+		<ul>
+			<li>Vest</li>
+			<li>Polo</li>
+			<li>Test</li>
+			<li>Testproduct</li>
+		</ul>
+	</div>
 </div>
 
 @endsection

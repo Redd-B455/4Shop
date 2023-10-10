@@ -9,6 +9,15 @@ form{
 	margin-top: 2em;
 }
 
+.categories-edit {
+	display: flex;
+	justify-content: space-between;
+}
+
+.categories-edit div h4 {
+	margin-top: 2rem;
+}
+
 .product-title{
 	display: flex;
 	justify-content: space-between;
