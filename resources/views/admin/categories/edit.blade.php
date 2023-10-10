@@ -17,12 +17,10 @@
 	</form>
 	<div>
 		<h4>Producten</h4>
-		@foreach
 		<ul>
-			<li>Vest</li>
-			<li>Polo</li>
-			<li>Test</li>
-			<li>Testproduct</li>
+		@foreach($category->products as $product)
+			<li>{{ $product->title }}</li>
+		@endforeach
 		</ul>
 	</div>
 </div>

@@ -12,6 +12,16 @@
 			<label for="title">Titel</label>
 			<input type="text" id="title" name="title" class="form-control" value="{{ old('title') }}">
 		</div>
+
+		<label for="category">Categorie</label>
+		<select name="category" id="category" class="form-control">
+			@foreach($category as $category)
+				<div class="form-group">
+					<option value="{{$category->id}}">{{$category->name}}</option>
+				</div>
+			@endforeach
+		</select>
+
 		<div class="form-group">
 			<label for="price">Prijs</label>
 			<div class="input-group mb-2">
@@ -43,7 +53,7 @@
 		</div>
 		<div class="form-group">
 			<input type="file" id="image" name="image" accept="image/png, image/jpeg">
-		</div>
+		</div>	
 
 		<div class="form-group">
 			<label for="description">Beschrijving</label>
