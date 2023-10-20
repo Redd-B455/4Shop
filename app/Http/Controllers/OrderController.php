@@ -34,6 +34,26 @@ class OrderController extends Controller
                 ->with(compact('cart'));
     }
 
+    public function toggle(Order $order)
+    {
+        if($order->delivered == 0)
+        {
+            $order->delivered = 1;
+        }
+
+        else
+        {
+            $order->delivered = 0;
+        }
+        
+        $order->save();
+        return redirect()->route('admin.orders.index');
+
+        $order->delivered = $order->delivered = 0;
+        $order->save();
+        return redirect()->route('admin.orders.index');
+    }
+
     public function pay(Request $request)
     {
         $request->session()->reflash();

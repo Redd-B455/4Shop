@@ -33,7 +33,7 @@
 					{!! $order->payed ? '<span class="badge badge-success">betaald</span>' : '<span class="badge badge-warning">niet betaald</span>' !!}
 				</td>
 				<td>
-					{!! $order->delivered ? '<span class="badge badge-success">Geleverd</span>' : '<span class="badge badge-warning">Niet Geleverd</span>' !!}
+					{!! $order->delivered ? '<a href="{{ route('admin.orders.toggle') }}" class="badge badge-success">Geleverd</a>' : '<a href="{{ route('admin.orders.toggle') }}" class="badge badge-warning">Niet Geleverd</a>' !!}
 				</td>
 			</tr>
 		@endforeach

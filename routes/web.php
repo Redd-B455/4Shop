@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::post('products/{product}/types/create', [AdminProductController::class, 'types_store'])->name('admin.products.types.store');
     Route::delete('products/{product}/types/{type}', [AdminProductController::class, 'types_delete'])->name('admin.products.types.delete');
 
+    Route::get('orders/toggle', [AdminOrderController::class, 'toggle'])->name('admin.orders.toggle');
     Route::get('orders/factory', [AdminOrderController::class, 'factory'])->name('admin.orders.factory');
     Route::get('orders/mail', [AdminOrderController::class, 'mail'])->name('admin.orders.mail');
     Route::post('orders/mail', [AdminOrderController::class, 'mail_send'])->name('admin.orders.mail.send');
